@@ -1,14 +1,17 @@
-/** This program is designed to help 
-*** Runners calculate how to pace various
-*** races in track or cross country
+/* This program is designed to help 
+** Runners calculate how to pace various
+** races in track or cross country
 */
 
-//This package adds a scanner that can read user input
-import util.java.scanner.*;
+import java.util.Scanner; //Utility that can read user input
 
-//Creates a scanner object that will detect input
-Scanner scan = new Scanner(System.in);
-
-//This is what the program will run
-public void main() {
+class TrackCalculator {
+    
+    //Scanner that will read user input, used in nextLine
+    Scanner scan = new Scanner(System.in);
+    
+    /** Function to return the user input, using scanner */
+    public String getNext(){
+        return scan.nextLine(); 
+    }
 }
