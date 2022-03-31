@@ -1,0 +1,7 @@
+get time
+check if time is valid
+do math
+    modulus to seperate minutes and secconds
+    concat these together
+output math
+ask if they want lap splits(?)
