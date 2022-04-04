@@ -26,8 +26,8 @@ class TrackCalculator {
     //list that stores output texts:
     public static final String[] kLables = 
     {
-        "Your 400m Time: ", "800m Approx: ", "800m Approx: ", "1500m Approx: ",  
-        "1600m Approx: ", "1 Mile Approx: ", "3k Approx: ", "5k Approx: "
+        "200m Approx: ", "800m Approx: ", "1500m Approx: ", "1600m Approx: ",  
+        "1 Mile Approx: ", "3k Approx: ", "5k Approx: "
     }; //this list was made on multiple lines for readability
 
     //TODO: revise addon constant to be more realistic
