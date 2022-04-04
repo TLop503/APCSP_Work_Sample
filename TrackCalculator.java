@@ -42,13 +42,21 @@ class TrackCalculator {
         //TODO: add print stuff
         //hello, etc
         //enter thing
+        System.out.println("Please enter your 400m time: ");
+        
+        /**input is the user-submitted value, it gets converted to a double and assigned to time */
         String userInput = getNext();
+        Double userTime = -1.0;
 
         //Checks if input is valid - matches returns true if input is only ints, otherise returns false
         if (userInput.matches("[0-9]+")){
-            
+            //Converts input from string to double so it can be passed to doMath()
+            userTime = Double.parseDouble(userInput);
+            //manipulates a list of times to match the user inputed pace
+            doMath(userTime);
+            outputData();
         } else {
-            //TODO: add message saying they typed it in wrong
+            System.out.println("Please just enter your time in secconds, with no punctuation");
         }
 
     }
