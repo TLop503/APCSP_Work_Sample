@@ -16,8 +16,6 @@
 
 import java.util.Scanner; //Utility that can read user input
 
-import javax.naming.TimeLimitExceededException;
-
 class TrackCalculator {
     
     //Scanner that will read user input, used in nextLine
