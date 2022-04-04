@@ -16,12 +16,15 @@
 
 import java.util.Scanner; //Utility that can read user input
 
+import javax.naming.TimeLimitExceededException;
+
 class TrackCalculator {
     
     //Scanner that will read user input, used in nextLine
     public static Scanner scan = new Scanner(System.in);
     //lists that stores times:
     public static double[] calculatedTimes = {-1, -1, -1, -1, -1, -1, -1};
+    public static String[] outPutTimes = {"", "", "", "", "", "",""};   
     //list that stores output texts:
     public static final String[] kLables = 
     {
@@ -70,9 +73,9 @@ class TrackCalculator {
     public static void outputData(){
         System.out.println("Reccomended paces for each race, based on your 400m time: ");
         for (int i = 0; i < 7; i++){ //iterates through lists of data
-        
+            outPutTimes[i] = modulusTimes(calculatedTimes[i]);
             //concatenates times with lables, prints to console
-            System.out.println(kLables[i] + calculatedTimes[i]); 
+            System.out.println(kLables[i] + outPutTimes[i]); 
         }
     }
 
@@ -83,6 +86,14 @@ class TrackCalculator {
             //TODO: replace this with modulus to seperate minutes and secconds
             calculatedTimes[i] = ((time * kFactors[i]) + kAddon[i]);
         }
+    }
+
+    /**converts the time in secconds returned by doMath() to minutes:secconds format */
+    public static String modulusTimes(double time){
+        double decimal = time % 60;
+        int wholeNum = (int) (time / 60);
+        String output = (Integer.toString(wholeNum) + ":" + Double.toString(decimal));
+        return output;
     }
 
 }
