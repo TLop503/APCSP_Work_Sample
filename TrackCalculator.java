@@ -33,7 +33,7 @@ class TrackCalculator {
     //TODO: revise addon constant to be more realistic
 
     //Stores what the user time gets multiplied by
-    public static final double[] kFactors = {0.5, 2, 3.75, 4, 4, 7.5, 12.5};
+    public static final double[] kFactors = {0.5, 2, 3.75, 4, 4, 10, 17};
 
     //Stores extra secconds added after multiplying
     public static final double[] kAddon = {-2, 2, 6, 8, 11, 40, 60};
