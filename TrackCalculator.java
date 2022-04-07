@@ -20,13 +20,12 @@ class TrackCalculator {
         "1 Mile Approx: ", "3k Approx: ", "5k Approx: "
     }; //this list was made on multiple lines for readability
 
-    //TODO: revise addon constant to be more realistic
-
     //Stores what the user time gets multiplied by
-    public static final double[] kFactors = {0.5, 2, 3.75, 4, 4, 10, 17};
-
+    public static final double[] kFactors = {0.5, 2, 3.75, 4, 4, 7.5, 12.5};
+    
+    //TODO: revise addon constant to be more realistic
     //Stores extra secconds added after multiplying
-    public static final double[] kAddon = {-2, 2, 6, 8, 11, 40, 60};
+    public static final double[] kAddon = {-2, 2, 6, 8, 11, 100, 200};
 
     public static void main(String[] args){ //Main method, code is run in here
     
@@ -70,8 +69,7 @@ class TrackCalculator {
     /** Function to calculate final times */
     public static void doMath(double time){
         for (int i = 0; i < 7; i++) { //iterates through lists of data
-        
-            //TODO: replace this with modulus to seperate minutes and secconds
+            //times are calculated by multiplying them by a constant and then adding a few secconds to account for slower speeds
             calculatedTimes[i] = ((time * kFactors[i]) + kAddon[i]);
         }
     }
