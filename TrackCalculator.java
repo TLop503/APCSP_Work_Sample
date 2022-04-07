@@ -3,25 +3,15 @@
 ** races in track or cross country
 */
 
-/*
-** Time conversions for reference
-**  200 = 400/2 - 2
-**  800 = 400 * 2 + 2
-**  1500 = (400 * 4) - (400/4) + 6
-**  1600 = 400*4 + 8
-**  1 mile = 400*4 + 11
-**  3000 = 
-**  5k = 
-*/
-
 import java.util.Scanner; //Utility that can read user input
 
 class TrackCalculator {
     
     //Scanner that will read user input, used in nextLine
     public static Scanner scan = new Scanner(System.in);
-    //lists that stores times:
+    //lists that stores manipulated times:
     public static double[] calculatedTimes = {-1, -1, -1, -1, -1, -1, -1};
+    //list that will be called when outputting the final message
     public static String[] outPutTimes = {"", "", "", "", "", "",""};   
     //list that stores output texts:
     public static final String[] kLables = 
@@ -40,16 +30,15 @@ class TrackCalculator {
 
     public static void main(String[] args){ //Main method, code is run in here
     
-        //TODO: add print stuff
-        //hello, etc
-        //enter thing
-        System.out.println("Please enter your 400m time: ");
+        //really long string uses \n to signal when to move to next line
+        System.out.println("+------------------------------------+ \n|     Welcome to the Track Split     | \n|           Calculator!              | \n+------------------------------------| \n|       This Calculator will         | \n|      help you set goals and        | \n|       estimate your paces for      | \n|           various races            | \n+------------------------------------+ \n\nPlease Enter your 400m time, in secconds:");
         
-        /**input is the user-submitted value, it gets converted to a double and assigned to time */
+        /**userInput is the user-submitted value, it gets converted to a double and assigned to userTime */
         String userInput = getNext();
         Double userTime = -1.0;
 
         //Checks if input is valid - matches returns true if input is only ints, otherise returns false
+        //if matches returns true, then the program will continue. otherwise it will print a message and end.
         if (userInput.matches("[0-9]+")){
             //Converts input from string to double so it can be passed to doMath()
             userTime = Double.parseDouble(userInput);
@@ -58,6 +47,7 @@ class TrackCalculator {
             outputData();
         } else {
             System.out.println("Please just enter your time in secconds, with no punctuation");
+            System.out.println("For example: '62' not 'sixty-two' or '62.3'");
         }
 
     }

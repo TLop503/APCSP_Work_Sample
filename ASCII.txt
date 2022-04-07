@@ -1,12 +1,12 @@
-+------------------------------------+
-|     Welcome to the Track Split     |
-|           Calculator!              |
-+------------------------------------|
-|       This Calculator will         |
-|      help you set goals and        |
-|       estimate your paces for      |
-|           various races            |
-+------------------------------------+
++------------------------------------+ \n
+|     Welcome to the Track Split     | \n
+|           Calculator!              | \n
++------------------------------------| \n
+|       This Calculator will         | \n
+|      help you set goals and        | \n
+|       estimate your paces for      | \n
+|           various races            | \n
++------------------------------------+ \n \n
 
 ---Please Enter your 400m time, in secconds:
 
