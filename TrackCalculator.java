@@ -68,10 +68,38 @@ class TrackCalculator {
 
     /** Function to calculate final times */
     public static void doMath(double time){
-        for (int i = 0; i < 7; i++) { //iterates through lists of data
-            //times are calculated by multiplying them by a constant and then adding a few secconds to account for slower speeds
-            calculatedTimes[i] = ((time * kFactors[i]) + kAddon[i]);
+        if (time > 40) {    //if the inputed time is valid the program continues, otherwise it ends
+            for (int i = 0; i < 7; i++) { //iterates through lists of data
+                //times are calculated by multiplying them by a constant and then adding a few secconds to account for slower speeds
+                calculatedTimes[i] = ((time * kFactors[i]) + kAddon[i]);
+            }
+            //After the code is done manipulating the times, it prints a message saying everything worked
+            System.out.println("--Calculating times...");
+            
+            try { //attempts to pause the code for 3 seconds for ux appeal
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+            System.out.println("--Success!");
+
+        } else {
+            System.out.println("--Calculating times...");
+            
+            try { //attempts to pause the code for 3 seconds for ux appeal
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+            System.out.println("--ERROR");
+            System.out.println("--Please enter a realistic time");
+
         }
+
     }
 
     /**converts the time in secconds returned by doMath() to minutes:secconds format */

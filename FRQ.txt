@@ -1,0 +1,52 @@
+1: Describe the overall purpose of the program
+    This program is designed to calculate paces for various 
+    track races based on the user's 400m time.
+
+2: Describes what functionality of the program is demonstrated in the video
+
+3: Describes the input and output of the program demonstrated in the video
+    The user inputs an integer representing their 400m time, and the program
+    outputs a list of suggested paces for various races
+
+4: Code segment showing how data is stored in the list:
+    //Stores what the user time gets multiplied by
+    public static final double[] kFactors = {0.5, 2, 3.75, 4, 4, 7.5, 12.5};
+
+5: Code segment showing how data in the list is being used:
+    for (int i = 0; i < 7; i++) { //iterates through lists of data
+        //times are calculated by multiplying them by a constant and then adding a few secconds to account for slower speeds
+        calculatedTimes[i] = ((time * kFactors[i]) + kAddon[i]);
+    }
+
+6: Name of list
+    kFactors
+
+7: What the data in the list represents:
+
+8: How the list manages complexity:
+
+9: The first program code segment must be a student-developed 
+   procedure that:
+   □ Defines the procedure’s name and return type (if necessary)
+   □ Contains and uses one or more parameters that have an effect
+   on the functionality of the procedure
+   □ Implements an algorithm that includes sequencing, selection,
+   and iteration
+
+10: Where the procedure is being called:
+
+11: What the procedure does and how it works with the program
+
+12: How the procedure works
+
+13: First call to procedure
+
+14: Second call
+
+15: Conditions tested by first call:
+
+16: Conditions tested by seccond call:
+
+17: Results of first call:
+
+18: Results of seccond call:
