@@ -22,8 +22,11 @@
     kFactors
 
 7: What the data in the list represents:
+    This list stores the factors the user time will be multiplied by
 
 8: How the list manages complexity:
+    By storing each unique factor in a list, they can be called and used in a for-loop
+    instead of having to multiply each factor by the input in a seperate line.
 
 9: The first program code segment must be a student-developed 
    procedure that:
@@ -33,7 +36,10 @@
    □ Implements an algorithm that includes sequencing, selection,
    and iteration
 
+   paste doMath()
+
 10: Where the procedure is being called:
+    line 45
 
 11: What the procedure does and how it works with the program
 
