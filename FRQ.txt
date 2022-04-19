@@ -42,17 +42,36 @@
     line 45
 
 11: What the procedure does and how it works with the program
+    The procedure takes user inputed time, and extrapolates it into a list of
+    reccomended paces for longer-distance races. The data is stored in a public 
+    list so it can be accessed later by a different function.
 
 12: How the procedure works
+    First, the procedure takes a double "time" as a paramater. Next, time is
+    checked in an if statement - if time is larger than 40, the program continues
+    and if it isn't it stops and asks for a realistic time. If time is
+    greater than 40, the program starts a for-loop, iterateing through 3
+    lists. Time is multiplied by the contents of the first list, 
+    adds a constant from the second list, and the result is 
+    is stored in the third list. The for loop ensures each list is being acessed
+    at the same index at the same time. Once this loop is done, the 
+    procedure ends and the program continues. This is a void function, so there
+    is no return value. Instead, the function stores the data it manipulates 
+    in a variable that can be called later.
 
 13: First call to procedure
+    user input is less than 40
 
 14: Second call
 
 15: Conditions tested by first call:
+    the if statement on line 71 returns false, triggering the else stament 
+    on line 88
 
 16: Conditions tested by seccond call:
 
 17: Results of first call:
-
+    The code prints a message telling the user to input a realistic number
+    (the world's fastest 400m time is 45 secconds, and inputing small times
+    can yeild flawed results.)
 18: Results of seccond call:
