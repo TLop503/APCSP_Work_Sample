@@ -60,18 +60,23 @@
     in a variable that can be called later.
 
 13: First call to procedure
-    user input is less than 40
+    doMath(20)
 
 14: Second call
+    doMath(60)
 
 15: Conditions tested by first call:
-    the if statement on line 71 returns false, triggering the else stament 
-    on line 88
+    20 is less than 40 so the else statement runs
 
 16: Conditions tested by seccond call:
+    60 is greater than 40 so the if statement's contents runs
 
 17: Results of first call:
     The code prints a message telling the user to input a realistic number
     (the world's fastest 400m time is 45 secconds, and inputing small times
-    can yeild flawed results.)
+    can yeild flawed results since the math is only accurate for average times,
+    and not extreme edge cases.)
+
 18: Results of seccond call:
+    The main purpose of the function runs, manipulating the arrays to calculated
+    each time
