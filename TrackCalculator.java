@@ -27,6 +27,9 @@ class TrackCalculator {
     //Stores extra secconds added after multiplying
     public static final double[] kAddon = {-2, 2, 6, 8, 11, 100, 200};
 
+    //sentry that is changed to true if doMAth() works
+    public static boolean timeSentry = false;
+
     public static void main(String[] args){ //Main method, code is run in here
     
         //really long string uses \n to signal when to move to next line
@@ -43,7 +46,9 @@ class TrackCalculator {
             userTime = Double.parseDouble(userInput);
             //manipulates a list of times to match the user inputed pace
             doMath(userTime);
-            outputData();
+            //if doMath was successful the program prints the data
+            if (timeSentry) {outputData();}
+            
         } else {
             System.out.println("Please just enter your time in secconds, with no punctuation");
             System.out.println("For example: '62' not 'sixty-two' or '62.3'");
@@ -70,7 +75,8 @@ class TrackCalculator {
     public static void doMath(double time){
         if (time > 40) {    //if the inputed time is valid the program continues, otherwise it ends
             for (int i = 0; i < 7; i++) { //iterates through lists of data
-                //times are calculated by multiplying them by a constant and then adding a few secconds to account for slower speeds
+                //times are calculated by multiplying them by a constant 
+                //and then adding a few secconds to account for slower speeds
                 calculatedTimes[i] = ((time * kFactors[i]) + kAddon[i]);
             }
             //After the code is done manipulating the times, it prints a message saying everything worked
@@ -84,6 +90,7 @@ class TrackCalculator {
             }
 
             System.out.println("--Success!");
+            timeSentry = true;
 
         } else {
             System.out.println("--Calculating times...");
