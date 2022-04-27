@@ -1,6 +1,9 @@
 /* This program is designed to help 
 ** Runners calculate how to pace various
 ** races in track or cross country
+**
+**  NOTE: the outputed tiimes aren't perfect, they are a bit fast, but the logic used to calculate them is accurate
+**
 */
 
 import java.util.Scanner; //Utility that can read user input
